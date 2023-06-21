@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #CAD2C5;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 50px 180px 200px;
+    grid-template-areas:  "sidebar input input input"
+                          "sidebar article1 article2 article3"
+                          "sidebar footer footer footer";
+    gap: 50px;
+    padding: 50px;
+}
+
+nav{
+    background-color:  #2F3D46;
+    height: 90px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+sidebar{
+    background-color:  #353535;
+    grid-area: sidebar;
+    border-radius: 30px;
+}
+.input{
+    grid-area: input;
+    border-radius: 18px;
+    text-align: center;
+}
+input{
+    width: 450px;
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    background-color:  #353535;
+
+}
+.article1{
+    background-color:  #353535;
+    grid-area: article1;
+    border-radius: 25px;
+    
+}
+.article2{
+    background-color:  #353535;
+    grid-area: article2;
+    border-radius: 30px;
+}
+.article3{
+    background-color:  #353535;
+    grid-area: article3;
+    border-radius: 30px;
+}
+footer{
+    background-color:  #353535;
+    grid-area: footer ;
+    border-radius: 30px;
+}
+
+@media (max-width:800px){
+    .container{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 80px 1fr 300px 300px 300px 50px;
+
+        grid-template-areas:  "sidebar"
+                              "input"
+                              "article1"
+                              "article2"
+                              "article3"
+                              "footer";
+       gap: 15px;
+       padding: 5px;
+    }
+
+    nav{ 
+        height: 50px;
+        width: auto;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .input{
+        grid-area: input;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    input{
+        width: 500px;
+        height: 50px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: none;
+        background-color:  #353535;
+    
+    }
+
+    sidebar{
+        background-color:  #353535;
+        grid-area: sidebar;
+        border-radius: 5px;
+    }
+  
+
+    .article1{
+        background-color:  #353535;
+        grid-area: article1;
+        border-radius: 8px;
+        
+    }
+    .article2{
+        background-color:  #353535;
+        grid-area: article2;
+        border-radius: 8px;
+    }
+    .article3{
+        background-color:  #353535;
+        grid-area: article3;
+        border-radius: 8px;
+    }
+    footer{
+        background-color:  #353535;
+        grid-area: footer ;
+        border-radius: 8px;
+    }
+}
+
+
+
